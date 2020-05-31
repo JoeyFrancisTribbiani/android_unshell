@@ -1,0 +1,30 @@
+package com.example.reforceapk;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TwoSetCommon {
+    ArrayList<Integer> a = new ArrayList<Integer>();
+    ArrayList<Integer> b = new ArrayList<Integer>();
+    ArrayList<Integer> c = new ArrayList<Integer>();
+    public void main(String[] args){
+        byte[] indexSetA = ReverseIndex(a);
+        byte[] indexSetB = ReverseIndex(b);
+
+        for (int i = 0; i < indexSetA.length; i++) {
+            if(indexSetA[i] == 1 && indexSetB[i] == 1)
+            {
+                c.add(indexSetA[i]);
+            }
+        }
+
+    }
+
+    private byte[] ReverseIndex(ArrayList<Integer> a) {
+        byte[] res = new byte[a.getMax()];
+        for (int i = 0; i < a.size(); i++) {
+            res[a.get(i)]= 1;
+        }
+        return res;
+    }
+}

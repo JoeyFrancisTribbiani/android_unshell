@@ -1,0 +1,3 @@
+rootProject.name='DexShellTools'
+include ':app'
+include ':reforceapk'
